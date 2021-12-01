@@ -51,6 +51,29 @@
 
 - With different ARCH compliers, the length of ```int``` can be 2/4/8 bytes.
 
+### Pointer Pits
+
+- Pointers misuse, or point out of range.
+  - ```int *p; p=100; *p = 3; // Error```
+  - ```int a[10]; *p=a; p+=10; *p = 3; // Error``
+
+- ```malloc``` and ```free```
+  - Use ```assert```.
+
+- The stack pointer already returned. But require return the gone value.
+  - ```char *f() { char a[10]="hello"; return a; }```
+
+- Mis-setting pointer to content itself.
+  - ```*ip=&i; ip = 7; *ip=5;```
+
+- Consider type(or struct) into pointer computation.
+  - ```long a[10], p=a; p+=3;```,  p will move forward 12 bytes.
+
+- Forget initialization.
+  - ```char *r, *s="hello!"; strcpy(r, s);```
+  - ```char *p; *p = 5;```
+  - ```char *p; scanf("%s", p);```
+
 
 
 
