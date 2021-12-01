@@ -17,7 +17,7 @@
 
 - Use valgrind to check memory leaks.
 
-### Common Pits
+1. Common Pits
 
 - ```=``` and ```==``` typo.
   - ```if (a=5) ...```, run time error.
@@ -53,7 +53,7 @@
 
 - With different ARCH compliers, the length of ```int``` can be 2/4/8 bytes.
 
-### Pointer Pits
+2. Pointer Pits
 
 - Pointers misuse, or point out of range.
   - ```int *p; p=100; *p = 3; // Error```
