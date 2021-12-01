@@ -3,6 +3,7 @@
 ## Preventing common pitfalls
 
 ### Concepts
+
 - ```-Wall``` all the way. 
   -Wall means warning all
 
@@ -17,6 +18,7 @@
 - Use valgrind to check memory leaks.
 
 ### Common Pits
+
 - ```=``` and ```==``` typo.
   - ```if (a=5) ...```, run time error.
   - ```if (5=a) ...```, error can be found during comple time.
